@@ -1,1 +1,1 @@
-# This file uses genetic algorit
+# This file uses genetic algorithm to optimaize th
