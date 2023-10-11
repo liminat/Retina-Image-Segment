@@ -1,1 +1,1 @@
-# This file uses gen
+# This file uses genetic algorit
