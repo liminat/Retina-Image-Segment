@@ -5,4 +5,4 @@
 # can install it follow the link: https://github.com/DEAP/deap.
 
 # The input files are original image and its ground truth image and 
-# the output is t
+# the output is the optimaized par
