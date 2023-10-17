@@ -7,4 +7,6 @@
 # The input files are original image and its ground truth image and 
 # the output is the optimaized parameters.
 
-import rand
+import random
+import mfr
+fro
