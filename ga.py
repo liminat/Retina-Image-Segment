@@ -15,4 +15,6 @@ from deap import tools
 import numpy as np
 import sys
 import timeit
-impo
+import cv2
+
+# im0 i
