@@ -12,4 +12,7 @@ import mfr
 from deap import base
 from deap import creator
 from deap import tools
-import numpy as n
+import numpy as np
+import sys
+import timeit
+impo
