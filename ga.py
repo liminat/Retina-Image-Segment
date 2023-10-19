@@ -11,4 +11,5 @@ import random
 import mfr
 from deap import base
 from deap import creator
-from deap import too
+from deap import tools
+import numpy as n
