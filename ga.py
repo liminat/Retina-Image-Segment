@@ -17,4 +17,4 @@ import sys
 import timeit
 import cv2
 
-# im0 i
+# im0 is the original image and gt is
