@@ -19,4 +19,5 @@ import cv2
 
 # im0 is the original image and gt is its ground truth. 
 # and then, we convert these images into grayscale images.
-im0 = cv2.imread(sys
+im0 = cv2.imread(sys.argv[1])
+gt = cv2.imread
