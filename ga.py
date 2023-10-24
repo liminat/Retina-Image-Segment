@@ -21,4 +21,5 @@ import cv2
 # and then, we convert these images into grayscale images.
 im0 = cv2.imread(sys.argv[1])
 gt = cv2.imread(sys.argv[2])
-im1 = cv2.cvtColor(im0, cv2
+im1 = cv2.cvtColor(im0, cv2.COLOR_BGR2GRAY)
+gt = 
