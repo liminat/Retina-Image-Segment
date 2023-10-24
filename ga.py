@@ -22,4 +22,6 @@ import cv2
 im0 = cv2.imread(sys.argv[1])
 gt = cv2.imread(sys.argv[2])
 im1 = cv2.cvtColor(im0, cv2.COLOR_BGR2GRAY)
-gt = cv2.cvtColor(gt, cv
+gt = cv2.cvtColor(gt, cv2.COLOR_BGR2GRAY)
+
+#
