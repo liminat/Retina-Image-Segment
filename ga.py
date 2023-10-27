@@ -25,4 +25,4 @@ im1 = cv2.cvtColor(im0, cv2.COLOR_BGR2GRAY)
 gt = cv2.cvtColor(gt, cv2.COLOR_BGR2GRAY)
 
 # in order to reduce the quantization error, we convert the 
-# 8
+# 8-bit image to float imag
