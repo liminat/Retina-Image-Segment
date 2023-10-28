@@ -27,4 +27,4 @@ gt = cv2.cvtColor(gt, cv2.COLOR_BGR2GRAY)
 # in order to reduce the quantization error, we convert the 
 # 8-bit image to float image. 
 im1 = im1.astype(np.float32) / 255.0
-gt = gt.a
+gt = gt.astype(np.float32) / 255.0
