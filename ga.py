@@ -29,4 +29,4 @@ gt = cv2.cvtColor(gt, cv2.COLOR_BGR2GRAY)
 im1 = im1.astype(np.float32) / 255.0
 gt = gt.astype(np.float32) / 255.0
 
-# create two va
+# create two variables of indi
