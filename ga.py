@@ -30,3 +30,4 @@ im1 = im1.astype(np.float32) / 255.0
 gt = gt.astype(np.float32) / 255.0
 
 # create two variables of individual and fitness function. 
+creator.create("Fitn
