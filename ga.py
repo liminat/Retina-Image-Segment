@@ -31,4 +31,4 @@ gt = gt.astype(np.float32) / 255.0
 
 # create two variables of individual and fitness function. 
 creator.create("FitnessMax", base.Fitness, weights=(1.0,))
-cr
+creator.create("Indiv
