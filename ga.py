@@ -33,4 +33,5 @@ gt = gt.astype(np.float32) / 255.0
 creator.create("FitnessMax", base.Fitness, weights=(1.0,))
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
-# create a base variabl
+# create a base variable in DEAP
+toolbox 
