@@ -34,4 +34,6 @@ creator.create("FitnessMax", base.Fitness, weights=(1.0,))
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
 # create a base variable in DEAP
-toolbox 
+toolbox = base.Toolbox()
+
+# f
