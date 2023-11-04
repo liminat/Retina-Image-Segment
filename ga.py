@@ -36,4 +36,4 @@ creator.create("Individual", list, fitness=creator.FitnessMax)
 # create a base variable in DEAP
 toolbox = base.Toolbox()
 
-# func is used for randomly generate in
+# func is used for randomly generate individual with differen
