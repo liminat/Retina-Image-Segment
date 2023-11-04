@@ -38,4 +38,4 @@ toolbox = base.Toolbox()
 
 # func is used for randomly generate individual with different range 
 # of parameters: 
-# L: the leng
+# L: the length of the neighborhoo
