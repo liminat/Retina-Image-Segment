@@ -37,4 +37,5 @@ creator.create("Individual", list, fitness=creator.FitnessMax)
 toolbox = base.Toolbox()
 
 # func is used for randomly generate individual with different range 
-# of paramet
+# of parameters: 
+# L: the leng
