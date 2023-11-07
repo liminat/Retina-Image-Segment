@@ -39,4 +39,4 @@ toolbox = base.Toolbox()
 # func is used for randomly generate individual with different range 
 # of parameters: 
 # L: the length of the neighborhood along the y-axis to smooth noise (1-15)
-# sigma: the standard d
+# sigma: the standard deviation of Gaussian fun
