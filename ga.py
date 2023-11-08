@@ -40,4 +40,4 @@ toolbox = base.Toolbox()
 # of parameters: 
 # L: the length of the neighborhood along the y-axis to smooth noise (1-15)
 # sigma: the standard deviation of Gaussian function
-# w: the k
+# w: the kernel size of the low-pa
