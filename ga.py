@@ -41,4 +41,5 @@ toolbox = base.Toolbox()
 # L: the length of the neighborhood along the y-axis to smooth noise (1-15)
 # sigma: the standard deviation of Gaussian function
 # w: the kernel size of the low-pass filter before compute MFR-FDoG
-# c: the gain of threshol
+# c: the gain of threshold
+func = [lambda:ran
