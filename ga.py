@@ -43,4 +43,4 @@ toolbox = base.Toolbox()
 # w: the kernel size of the low-pass filter before compute MFR-FDoG
 # c: the gain of threshold
 func = [lambda:random.randint(1, 15), lambda:random.uniform(0.35, 10), \
-        lambda:rand
+        lambda:random.randint(3, 50), l
