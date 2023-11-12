@@ -45,4 +45,5 @@ toolbox = base.Toolbox()
 func = [lambda:random.randint(1, 15), lambda:random.uniform(0.35, 10), \
         lambda:random.randint(3, 50), lambda:random.uniform(0.1, 5)]
 
-# Structure initializer
+# Structure initializers
+# define 'i
