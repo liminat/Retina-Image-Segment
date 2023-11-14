@@ -47,4 +47,4 @@ func = [lambda:random.randint(1, 15), lambda:random.uniform(0.35, 10), \
 
 # Structure initializers
 # define 'individual' to be an individual
-# consis
+# consisting of 4 paramet
