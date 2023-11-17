@@ -51,4 +51,4 @@ func = [lambda:random.randint(1, 15), lambda:random.uniform(0.35, 10), \
 toolbox.register("individual", tools.initCycle, creator.Individual, 
     func, 1)
 
-# def
+# define the population to be a li
