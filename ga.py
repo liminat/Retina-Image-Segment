@@ -52,4 +52,4 @@ toolbox.register("individual", tools.initCycle, creator.Individual,
     func, 1)
 
 # define the population to be a list of individuals
-toolbox.register("population", tools.initRepeat, list, toolb
+toolbox.register("population", tools.initRepeat, list, toolbox.individual)
