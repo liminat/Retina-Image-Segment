@@ -53,3 +53,5 @@ toolbox.register("individual", tools.initCycle, creator.Individual,
 
 # define the population to be a list of individuals
 toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
+# define the numbe
