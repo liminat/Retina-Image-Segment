@@ -55,4 +55,6 @@ toolbox.register("individual", tools.initCycle, creator.Individual,
 toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
 # define the number of individual 
-numi 
+numi = 0
+
+# the goal ('fi
