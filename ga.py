@@ -57,4 +57,4 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 # define the number of individual 
 numi = 0
 
-# the goal ('fi
+# the goal ('fitness') funct
