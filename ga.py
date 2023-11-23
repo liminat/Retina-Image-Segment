@@ -57,4 +57,5 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 # define the number of individual 
 numi = 0
 
-# the goal ('fitness') function to be maximi
+# the goal ('fitness') function to be maximized
+# the fitness func
