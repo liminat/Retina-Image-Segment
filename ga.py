@@ -58,4 +58,4 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 numi = 0
 
 # the goal ('fitness') function to be maximized
-# the fitness func
+# the fitness function is Dice 
