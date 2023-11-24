@@ -59,4 +59,6 @@ numi = 0
 
 # the goal ('fitness') function to be maximized
 # the fitness function is Dice coefficient. 
-def evalOneMax(ind
+def evalOneMax(individual):
+    global numi
+  
