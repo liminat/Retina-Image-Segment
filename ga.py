@@ -61,4 +61,4 @@ numi = 0
 # the fitness function is Dice coefficient. 
 def evalOneMax(individual):
     global numi
-    # compute runing t
+    # compute runing time of each individual
