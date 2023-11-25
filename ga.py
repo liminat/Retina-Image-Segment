@@ -62,3 +62,4 @@ numi = 0
 def evalOneMax(individual):
     global numi
     # compute runing time of each individual
+    evalstart = timeit
