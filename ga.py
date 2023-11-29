@@ -64,4 +64,5 @@ def evalOneMax(individual):
     # compute runing time of each individual
     evalstart = timeit.default_timer()
 
-    # define a varialbe of matched filter 
+    # define a varialbe of matched filter response.
+    matc
