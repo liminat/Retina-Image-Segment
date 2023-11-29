@@ -65,4 +65,4 @@ def evalOneMax(individual):
     evalstart = timeit.default_timer()
 
     # define a varialbe of matched filter response.
-    matc
+    matched = mfr.MFR(
