@@ -67,4 +67,4 @@ def evalOneMax(individual):
     # define a varialbe of matched filter response.
     matched = mfr.MFR(individual[0], individual[1], individual[2], individual[3])
 
-    # generate Gaussian and first-order derivative of Gaussi
+    # generate Gaussian and first-order derivative of Gaussian filers and the
