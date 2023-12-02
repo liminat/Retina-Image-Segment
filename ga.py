@@ -68,4 +68,5 @@ def evalOneMax(individual):
     matched = mfr.MFR(individual[0], individual[1], individual[2], individual[3])
 
     # generate Gaussian and first-order derivative of Gaussian filers and their 
-    # filter ban
+    # filter bank.
+    gf = matched.g
