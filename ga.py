@@ -69,4 +69,4 @@ def evalOneMax(individual):
 
     # generate Gaussian and first-order derivative of Gaussian filers and their 
     # filter bank.
-    gf = matched.g
+    gf = matched.gaussian_matched_
