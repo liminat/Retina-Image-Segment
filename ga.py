@@ -71,4 +71,5 @@ def evalOneMax(individual):
     # filter bank.
     gf = matched.gaussian_matched_filter_kernel()
     fdog = matched.fdog_filter_kernel()
-    bank_gf = matched.createMa
+    bank_gf = matched.createMatchedFilterBank(gf, 12)
+ 
