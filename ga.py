@@ -74,4 +74,5 @@ def evalOneMax(individual):
     bank_gf = matched.createMatchedFilterBank(gf, 12)
     bank_fdog = matched.createMatchedFilterBank(fdog, 12)
 
-    # generate matched filter response of both fi
+    # generate matched filter response of both filters.
+    H = matc
