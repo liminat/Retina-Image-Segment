@@ -76,4 +76,6 @@ def evalOneMax(individual):
 
     # generate matched filter response of both filters.
     H = matched.applyFilters(im1, bank_gf)
-    D = matched.applyFilters
+    D = matched.applyFilters(im1, bank_fdog)
+
+   
