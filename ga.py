@@ -79,3 +79,4 @@ def evalOneMax(individual):
     D = matched.applyFilters(im1, bank_fdog)
 
     # compute the threshold value using MFR-FDoG
+    kernel = np.on
