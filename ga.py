@@ -78,4 +78,4 @@ def evalOneMax(individual):
     H = matched.applyFilters(im1, bank_gf)
     D = matched.applyFilters(im1, bank_fdog)
 
-    # compute the threshold
+    # compute the threshold value using MFR-FDoG
