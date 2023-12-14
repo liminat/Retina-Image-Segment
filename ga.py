@@ -80,4 +80,5 @@ def evalOneMax(individual):
 
     # compute the threshold value using MFR-FDoG
     kernel = np.ones((matched.w,matched.w),np.float32)/(matched.w*matched.w)
-    dm = np.zeros(D.shape,
+    dm = np.zeros(D.shape,np.float32)
+    DD = np.array(
