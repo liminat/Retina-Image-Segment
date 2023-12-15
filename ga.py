@@ -83,4 +83,4 @@ def evalOneMax(individual):
     dm = np.zeros(D.shape,np.float32)
     DD = np.array(D, dtype='f')
     dm = cv2.filter2D(DD,-1,kernel)
-    dmn =
+    dmn = cv2.normalize(dm, 
