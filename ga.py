@@ -82,4 +82,4 @@ def evalOneMax(individual):
     kernel = np.ones((matched.w,matched.w),np.float32)/(matched.w*matched.w)
     dm = np.zeros(D.shape,np.float32)
     DD = np.array(D, dtype='f')
-    
+    dm = cv2.filter2D(
