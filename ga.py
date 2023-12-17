@@ -85,4 +85,5 @@ def evalOneMax(individual):
     dm = cv2.filter2D(DD,-1,kernel)
     dmn = cv2.normalize(dm, dm, 0, 1, cv2.NORM_MINMAX)
     uH = cv2.mean(H)
-    
+    Tc = matched.c * uH[0]
+ 
