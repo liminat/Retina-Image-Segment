@@ -88,4 +88,4 @@ def evalOneMax(individual):
     Tc = matched.c * uH[0]
     T = (1+dmn) * Tc 
 
-    # compute D
+    # compute Dice coefficie
