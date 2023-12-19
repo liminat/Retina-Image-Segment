@@ -89,4 +89,5 @@ def evalOneMax(individual):
     T = (1+dmn) * Tc 
 
     # compute Dice coefficient.
-    a, b, i = 0.
+    a, b, i = 0., 0., 0.
+    (h, w
