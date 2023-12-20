@@ -91,4 +91,5 @@ def evalOneMax(individual):
     # compute Dice coefficient.
     a, b, i = 0., 0., 0.
     (h, w) = H.shape
-    for y in range
+    for y in range(h):
+        fo
