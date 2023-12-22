@@ -92,4 +92,5 @@ def evalOneMax(individual):
     a, b, i = 0., 0., 0.
     (h, w) = H.shape
     for y in range(h):
-        for x in ran
+        for x in range(w):
+            
