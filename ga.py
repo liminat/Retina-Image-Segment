@@ -93,4 +93,4 @@ def evalOneMax(individual):
     (h, w) = H.shape
     for y in range(h):
         for x in range(w):
-            
+            if H[y][x] >= T[y][x] and gt
