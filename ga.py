@@ -97,4 +97,4 @@ def evalOneMax(individual):
                 i += 1
                 a += 1
                 b += 1
-            e
+            elif H[y][x] >= T[
