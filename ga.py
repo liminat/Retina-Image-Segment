@@ -100,4 +100,5 @@ def evalOneMax(individual):
             elif H[y][x] >= T[y][x] and not gt[y][x]:
                 a += 1
             elif H[y][x] < T[y][x] and gt[y][x]:
-                b +=
+                b += 1
+            elif 
