@@ -103,4 +103,6 @@ def evalOneMax(individual):
                 b += 1
             elif H[y][x] < T[y][x] and not gt[y][x]:
                 pass
-    dice = 
+    dice = 2*i/(a+b)
+
+  
