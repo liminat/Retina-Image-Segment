@@ -105,4 +105,4 @@ def evalOneMax(individual):
                 pass
     dice = 2*i/(a+b)
 
-  
+    # compute runing
