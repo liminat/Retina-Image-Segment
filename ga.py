@@ -105,4 +105,5 @@ def evalOneMax(individual):
                 pass
     dice = 2*i/(a+b)
 
-    # compute runing time of each indivi
+    # compute runing time of each individual
+    evalstop 
