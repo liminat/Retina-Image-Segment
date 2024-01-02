@@ -106,4 +106,4 @@ def evalOneMax(individual):
     dice = 2*i/(a+b)
 
     # compute runing time of each individual
-    evalstop 
+    evalstop = timeit.default_tim
