@@ -108,4 +108,4 @@ def evalOneMax(individual):
     # compute runing time of each individual
     evalstop = timeit.default_timer()
     numi += 1
-    print "individual
+    print "individual: ", numi, ":
