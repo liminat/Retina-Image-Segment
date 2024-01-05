@@ -108,4 +108,4 @@ def evalOneMax(individual):
     # compute runing time of each individual
     evalstop = timeit.default_timer()
     numi += 1
-    print "individual: ", numi, ": ", individual, "  dice: ", roun
+    print "individual: ", numi, ": ", individual, "  dice: ", round(dice, 2), 
