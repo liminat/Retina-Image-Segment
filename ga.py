@@ -109,4 +109,5 @@ def evalOneMax(individual):
     evalstop = timeit.default_timer()
     numi += 1
     print "individual: ", numi, ": ", individual, "  dice: ", round(dice, 2), \
-          "time consuming: ", round(evalstop - eval
+          "time consuming: ", round(evalstop - evalstart, 2)
+    re
