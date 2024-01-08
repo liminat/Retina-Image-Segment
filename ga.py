@@ -113,4 +113,6 @@ def evalOneMax(individual):
     return dice,
 
 #----------
-# Operator regis
+# Operator registration
+#----------
+# reg
