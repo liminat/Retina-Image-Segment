@@ -112,4 +112,5 @@ def evalOneMax(individual):
           "time consuming: ", round(evalstop - evalstart, 2)
     return dice,
 
-#--
+#----------
+# Operator regis
