@@ -115,4 +115,4 @@ def evalOneMax(individual):
 #----------
 # Operator registration
 #----------
-# reg
+# register the goal / fitnes
