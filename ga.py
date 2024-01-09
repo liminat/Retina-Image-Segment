@@ -116,4 +116,6 @@ def evalOneMax(individual):
 # Operator registration
 #----------
 # register the goal / fitness function
-toolbox.register("evaluate", ev
+toolbox.register("evaluate", evalOneMax)
+
+# register
