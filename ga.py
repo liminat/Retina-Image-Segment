@@ -119,4 +119,4 @@ def evalOneMax(individual):
 toolbox.register("evaluate", evalOneMax)
 
 # register the crossover operator
-toolbox.register("ma
+toolbox.register("mate", tools.cxTwoPoint)
