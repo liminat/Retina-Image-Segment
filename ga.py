@@ -118,4 +118,5 @@ def evalOneMax(individual):
 # register the goal / fitness function
 toolbox.register("evaluate", evalOneMax)
 
-# register the crossover op
+# register the crossover operator
+toolbox.register("ma
