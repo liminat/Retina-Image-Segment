@@ -120,3 +120,5 @@ toolbox.register("evaluate", evalOneMax)
 
 # register the crossover operator
 toolbox.register("mate", tools.cxTwoPoint)
+
+# register a 
