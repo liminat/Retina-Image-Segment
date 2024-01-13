@@ -121,4 +121,5 @@ toolbox.register("evaluate", evalOneMax)
 # register the crossover operator
 toolbox.register("mate", tools.cxTwoPoint)
 
-# register a mutation operator with a probability t
+# register a mutation operator with a probability to
+# flip each attribut
