@@ -122,4 +122,5 @@ toolbox.register("evaluate", evalOneMax)
 toolbox.register("mate", tools.cxTwoPoint)
 
 # register a mutation operator with a probability to
-# flip each attribut
+# flip each attribute/gene of 0.05
+too
