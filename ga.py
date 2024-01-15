@@ -123,4 +123,4 @@ toolbox.register("mate", tools.cxTwoPoint)
 
 # register a mutation operator with a probability to
 # flip each attribute/gene of 0.05
-toolbox.register("muta
+toolbox.register("mutate", tools.mutFlip
