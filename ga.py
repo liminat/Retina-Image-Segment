@@ -125,4 +125,5 @@ toolbox.register("mate", tools.cxTwoPoint)
 # flip each attribute/gene of 0.05
 toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
 
-# operator for selecting individuals for breedi
+# operator for selecting individuals for breeding the next
+# generat
