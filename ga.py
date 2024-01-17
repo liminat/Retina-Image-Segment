@@ -126,4 +126,4 @@ toolbox.register("mate", tools.cxTwoPoint)
 toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
 
 # operator for selecting individuals for breeding the next
-# generat
+# generation: each individua
