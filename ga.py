@@ -128,4 +128,4 @@ toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
 # operator for selecting individuals for breeding the next
 # generation: each individual of the current generation
 # is replaced by the 'fittest' (best) of three individuals
-# drawn randomly f
+# drawn randomly from the current gene
