@@ -129,4 +129,6 @@ toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
 # generation: each individual of the current generation
 # is replaced by the 'fittest' (best) of three individuals
 # drawn randomly from the current generation.
-toolbox.register("select", tools.selTournament, t
+toolbox.register("select", tools.selTournament, tournsize=3)
+
+#------
