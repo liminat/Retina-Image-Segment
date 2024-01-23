@@ -134,3 +134,5 @@ toolbox.register("select", tools.selTournament, tournsize=3)
 #----------
 
 def main():
+    global numi
+   
