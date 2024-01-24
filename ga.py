@@ -137,3 +137,5 @@ def main():
     global numi
     start = timeit.default_timer()
     random.seed(64)
+
+    # create a
