@@ -138,4 +138,5 @@ def main():
     start = timeit.default_timer()
     random.seed(64)
 
-    # create an initial population of 300 indivi
+    # create an initial population of 300 individuals (where
+    # 
