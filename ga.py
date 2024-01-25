@@ -138,4 +138,4 @@ def main():
     start = timeit.default_timer()
     random.seed(64)
 
-    # create a
+    # create an initial po
