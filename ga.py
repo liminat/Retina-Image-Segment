@@ -138,4 +138,4 @@ def main():
     start = timeit.default_timer()
     random.seed(64)
 
-    # create an initial po
+    # create an initial population of 300 indivi
