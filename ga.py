@@ -139,4 +139,4 @@ def main():
     random.seed(64)
 
     # create an initial population of 300 individuals (where
-    # 
+    # each individual is a 
