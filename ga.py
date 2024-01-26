@@ -140,4 +140,4 @@ def main():
 
     # create an initial population of 300 individuals (where
     # each individual is a list of integers)
-    pop = to
+    pop = toolbox.population(n=50)
