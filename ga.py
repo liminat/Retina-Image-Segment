@@ -142,4 +142,4 @@ def main():
     # each individual is a list of integers)
     pop = toolbox.population(n=50)
 
-    # CXPB  is the probability
+    # CXPB  is the probability with which tw
