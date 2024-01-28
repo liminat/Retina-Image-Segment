@@ -143,4 +143,6 @@ def main():
     pop = toolbox.population(n=50)
 
     # CXPB  is the probability with which two individuals
-    #       are cross
+    #       are crossed
+    #
+    # 
