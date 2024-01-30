@@ -146,3 +146,5 @@ def main():
     #       are crossed
     #
     # MUTPB is the probability for mutating an individual
+    #
+    # NGEN  is the
