@@ -145,4 +145,4 @@ def main():
     # CXPB  is the probability with which two individuals
     #       are crossed
     #
-    # MUTPB is the probability f
+    # MUTPB is the probability for mutating an individual
