@@ -147,4 +147,4 @@ def main():
     #
     # MUTPB is the probability for mutating an individual
     #
-    # NGEN  is the
+    # NGEN  is the number of generati
