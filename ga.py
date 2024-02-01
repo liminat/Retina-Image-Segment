@@ -148,4 +148,5 @@ def main():
     # MUTPB is the probability for mutating an individual
     #
     # NGEN  is the number of generations for which the
-    #       ev
+    #       evolution runs
+    CXPB, MU
