@@ -149,4 +149,6 @@ def main():
     #
     # NGEN  is the number of generations for which the
     #       evolution runs
-    CXPB, MUTPB, NGEN = 0.5, 0.2
+    CXPB, MUTPB, NGEN = 0.5, 0.2, 30
+    
+    p
