@@ -151,4 +151,6 @@ def main():
     #       evolution runs
     CXPB, MUTPB, NGEN = 0.5, 0.2, 30
     
-    print("St
+    print("Start of evolution")
+    
+   
