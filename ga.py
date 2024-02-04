@@ -154,4 +154,4 @@ def main():
     print("Start of evolution")
     
     # Evaluate the entire population
-    fi
+    fitnesses = list(map(t
