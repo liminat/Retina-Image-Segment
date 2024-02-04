@@ -153,4 +153,5 @@ def main():
     
     print("Start of evolution")
     
-    # Evaluate the en
+    # Evaluate the entire population
+    fi
