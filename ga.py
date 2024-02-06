@@ -158,4 +158,4 @@ def main():
     for ind, fit in zip(pop, fitnesses):
         ind.fitness.values = fit
     
-    print("  Evaluated 
+    print("  Evaluated %i individuals" % le
