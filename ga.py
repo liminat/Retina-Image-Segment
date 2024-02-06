@@ -156,4 +156,6 @@ def main():
     # Evaluate the entire population
     fitnesses = list(map(toolbox.evaluate, pop))
     for ind, fit in zip(pop, fitnesses):
-        ind.fitne
+        ind.fitness.values = fit
+    
+    p
