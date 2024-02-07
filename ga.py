@@ -161,4 +161,5 @@ def main():
     print("  Evaluated %i individuals" % len(pop))
     
     # Begin the evolution
- 
+    for g in range(NGEN):
+  
