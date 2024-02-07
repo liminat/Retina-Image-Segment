@@ -160,4 +160,5 @@ def main():
     
     print("  Evaluated %i individuals" % len(pop))
     
-    # B
+    # Begin the evolution
+ 
