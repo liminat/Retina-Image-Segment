@@ -162,4 +162,5 @@ def main():
     
     # Begin the evolution
     for g in range(NGEN):
-        print("-- Generation %i --" 
+        print("-- Generation %i --" % g)
+      
