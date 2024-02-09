@@ -163,4 +163,4 @@ def main():
     # Begin the evolution
     for g in range(NGEN):
         print("-- Generation %i --" % g)
-      
+        loopstart = timeit.
