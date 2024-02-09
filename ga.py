@@ -164,4 +164,4 @@ def main():
     for g in range(NGEN):
         print("-- Generation %i --" % g)
         loopstart = timeit.default_timer()
-        # Select the 
+        # Select the next generation indivi
