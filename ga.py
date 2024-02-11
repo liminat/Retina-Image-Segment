@@ -165,4 +165,4 @@ def main():
         print("-- Generation %i --" % g)
         loopstart = timeit.default_timer()
         # Select the next generation individuals
-        offspring = toolbox.selec
+        offspring = toolbox.select(pop, len(pop))
