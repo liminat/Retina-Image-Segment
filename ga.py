@@ -166,4 +166,4 @@ def main():
         loopstart = timeit.default_timer()
         # Select the next generation individuals
         offspring = toolbox.select(pop, len(pop))
-        # Clone the se
+        # Clone the selected individua
