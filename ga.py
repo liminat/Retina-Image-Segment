@@ -167,4 +167,4 @@ def main():
         # Select the next generation individuals
         offspring = toolbox.select(pop, len(pop))
         # Clone the selected individuals
-        offspring = list(map(toolbox.
+        offspring = list(map(toolbox.clone, offsprin
