@@ -170,4 +170,4 @@ def main():
         offspring = list(map(toolbox.clone, offspring))
         
         # Apply crossover and mutation on the offspring
-        fo
+        for child1, child2 
