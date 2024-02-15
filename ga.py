@@ -169,4 +169,5 @@ def main():
         # Clone the selected individuals
         offspring = list(map(toolbox.clone, offspring))
         
-        # Apply crossover and mutation on the o
+        # Apply crossover and mutation on the offspring
+        fo
