@@ -172,4 +172,5 @@ def main():
         # Apply crossover and mutation on the offspring
         for child1, child2 in zip(offspring[::2], offspring[1::2]):
 
-            # cross two individuals wi
+            # cross two individuals with probability CXPB
+   
