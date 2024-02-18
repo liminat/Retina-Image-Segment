@@ -173,4 +173,5 @@ def main():
         for child1, child2 in zip(offspring[::2], offspring[1::2]):
 
             # cross two individuals with probability CXPB
-            if random.rand
+            if random.random() < CXPB:
+ 
