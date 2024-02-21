@@ -175,3 +175,5 @@ def main():
             # cross two individuals with probability CXPB
             if random.random() < CXPB:
                 toolbox.mate(child1, child2)
+
+          
