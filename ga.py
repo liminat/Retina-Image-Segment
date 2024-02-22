@@ -176,4 +176,5 @@ def main():
             if random.random() < CXPB:
                 toolbox.mate(child1, child2)
 
-                # fitness values of the childr
+                # fitness values of the children
+                
