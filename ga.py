@@ -177,4 +177,5 @@ def main():
                 toolbox.mate(child1, child2)
 
                 # fitness values of the children
-                # must be recalculated
+                # must be recalculated later
+            
