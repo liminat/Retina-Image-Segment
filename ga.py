@@ -181,4 +181,6 @@ def main():
                 del child1.fitness.values
                 del child2.fitness.values
 
-        for mutant 
+        for mutant in offspring:
+
+    
