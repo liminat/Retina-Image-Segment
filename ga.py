@@ -178,4 +178,5 @@ def main():
 
                 # fitness values of the children
                 # must be recalculated later
-                del child1.fitness.va
+                del child1.fitness.values
+        
