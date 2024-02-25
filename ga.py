@@ -183,4 +183,5 @@ def main():
 
         for mutant in offspring:
 
-            # mutate an individual with
+            # mutate an individual with probability MUTPB
+      
