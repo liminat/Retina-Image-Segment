@@ -184,4 +184,5 @@ def main():
         for mutant in offspring:
 
             # mutate an individual with probability MUTPB
-            if random.random() <
+            if random.random() < MUTPB:
+               
