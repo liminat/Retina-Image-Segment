@@ -185,4 +185,5 @@ def main():
 
             # mutate an individual with probability MUTPB
             if random.random() < MUTPB:
-                toolbox.mutate(m
+                toolbox.mutate(mutant)
+         
