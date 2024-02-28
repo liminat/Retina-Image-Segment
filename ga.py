@@ -186,4 +186,6 @@ def main():
             # mutate an individual with probability MUTPB
             if random.random() < MUTPB:
                 toolbox.mutate(mutant)
-                del mutant.fitn
+                del mutant.fitness.values
+    
+   
