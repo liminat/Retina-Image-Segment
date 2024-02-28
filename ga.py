@@ -188,4 +188,4 @@ def main():
                 toolbox.mutate(mutant)
                 del mutant.fitness.values
     
-   
+        # Evaluate the indi
