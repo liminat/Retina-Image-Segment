@@ -188,4 +188,5 @@ def main():
                 toolbox.mutate(mutant)
                 del mutant.fitness.values
     
-        # Evaluate the individuals with 
+        # Evaluate the individuals with an invalid fitness
+    
