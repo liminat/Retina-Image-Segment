@@ -189,4 +189,4 @@ def main():
                 del mutant.fitness.values
     
         # Evaluate the individuals with an invalid fitness
-        invalid_ind 
+        invalid_ind = [ind for ind in 
