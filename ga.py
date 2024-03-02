@@ -189,4 +189,5 @@ def main():
                 del mutant.fitness.values
     
         # Evaluate the individuals with an invalid fitness
-        invalid_ind = [ind for ind in offspring if not ind.fitness.vali
+        invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+        f
