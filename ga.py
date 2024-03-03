@@ -190,4 +190,4 @@ def main():
     
         # Evaluate the individuals with an invalid fitness
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-        f
+        fitnesses = map(toolbox.eva
