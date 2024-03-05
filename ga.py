@@ -191,4 +191,5 @@ def main():
         # Evaluate the individuals with an invalid fitness
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
         fitnesses = map(toolbox.evaluate, invalid_ind)
-        for ind, fit in zip(invalid_ind, fitnesse
+        for ind, fit in zip(invalid_ind, fitnesses):
+            ind.fitnes
