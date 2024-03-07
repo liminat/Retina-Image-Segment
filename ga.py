@@ -193,4 +193,5 @@ def main():
         fitnesses = map(toolbox.evaluate, invalid_ind)
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
-  
+        
+        pr
