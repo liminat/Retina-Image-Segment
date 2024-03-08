@@ -194,4 +194,5 @@ def main():
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
         
-        print("  Evaluated %i individuals" 
+        print("  Evaluated %i individuals" % len(invalid_ind))
+        
