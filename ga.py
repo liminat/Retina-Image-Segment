@@ -196,4 +196,4 @@ def main():
         
         print("  Evaluated %i individuals" % len(invalid_ind))
         
-        # The population is entirely r
+        # The population is entirely replaced by the offsp
