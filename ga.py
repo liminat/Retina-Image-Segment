@@ -196,4 +196,4 @@ def main():
         
         print("  Evaluated %i individuals" % len(invalid_ind))
         
-        # The population 
+        # The population is entirely r
