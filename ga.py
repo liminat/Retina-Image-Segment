@@ -196,4 +196,5 @@ def main():
         
         print("  Evaluated %i individuals" % len(invalid_ind))
         
-        # The population is entirely replaced by the offsp
+        # The population is entirely replaced by the offspring
+        pop
