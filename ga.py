@@ -199,4 +199,4 @@ def main():
         # The population is entirely replaced by the offspring
         pop[:] = offspring
         
-        # Ga
+        # Gather all the fitness
