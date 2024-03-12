@@ -199,4 +199,5 @@ def main():
         # The population is entirely replaced by the offspring
         pop[:] = offspring
         
-        # Gather all the fitnesses in one list and prin
+        # Gather all the fitnesses in one list and print the stats
+   
