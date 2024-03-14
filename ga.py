@@ -200,4 +200,5 @@ def main():
         pop[:] = offspring
         
         # Gather all the fitnesses in one list and print the stats
-        fits = [ind.fitness.values[0] f
+        fits = [ind.fitness.values[0] for ind in pop]
+    
