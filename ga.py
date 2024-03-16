@@ -204,4 +204,4 @@ def main():
         
         length = len(pop)
         mean = sum(fits) / length
-        sum2 = sum(x
+        sum2 = sum(x*x for x in f
