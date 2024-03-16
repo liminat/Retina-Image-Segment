@@ -203,4 +203,5 @@ def main():
         fits = [ind.fitness.values[0] for ind in pop]
         
         length = len(pop)
-        mean = sum(fits) / len
+        mean = sum(fits) / length
+        sum2 = sum(x
