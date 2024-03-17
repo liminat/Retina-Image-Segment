@@ -205,4 +205,4 @@ def main():
         length = len(pop)
         mean = sum(fits) / length
         sum2 = sum(x*x for x in fits)
-        st
+        std = abs(sum2 / len
