@@ -207,4 +207,4 @@ def main():
         sum2 = sum(x*x for x in fits)
         std = abs(sum2 / length - mean**2)**0.5
         
-        print("
+        print("  Min %s" % min(fits))
