@@ -209,4 +209,4 @@ def main():
         
         print("  Min %s" % min(fits))
         print("  Max %s" % max(fits))
-    
+        print("  Avg %
