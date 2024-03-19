@@ -208,3 +208,4 @@ def main():
         std = abs(sum2 / length - mean**2)**0.5
         
         print("  Min %s" % min(fits))
+        print("  Max %s"
