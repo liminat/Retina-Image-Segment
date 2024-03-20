@@ -210,4 +210,5 @@ def main():
         print("  Min %s" % min(fits))
         print("  Max %s" % max(fits))
         print("  Avg %s" % mean)
-        print("  Std %s" 
+        print("  Std %s" % std)
+        num
