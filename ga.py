@@ -211,4 +211,5 @@ def main():
         print("  Max %s" % max(fits))
         print("  Avg %s" % mean)
         print("  Std %s" % std)
-        num
+        numi = 0
+        l
