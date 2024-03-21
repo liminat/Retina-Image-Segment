@@ -212,4 +212,5 @@ def main():
         print("  Avg %s" % mean)
         print("  Std %s" % std)
         numi = 0
-        loopstop = timeit.defau
+        loopstop = timeit.default_timer()
+     
