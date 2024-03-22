@@ -213,4 +213,4 @@ def main():
         print("  Std %s" % std)
         numi = 0
         loopstop = timeit.default_timer()
-     
+        print "  loop time con
