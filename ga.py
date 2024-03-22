@@ -213,4 +213,6 @@ def main():
         print("  Std %s" % std)
         numi = 0
         loopstop = timeit.default_timer()
-        print "  loop time consuming: ", round(loops
+        print "  loop time consuming: ", round(loopstop - loopstart, 2)
+
+  
