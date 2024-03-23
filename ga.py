@@ -215,4 +215,6 @@ def main():
         loopstop = timeit.default_timer()
         print "  loop time consuming: ", round(loopstop - loopstart, 2)
 
-    print("-- End of (successful) evolutio
+    print("-- End of (successful) evolution --")
+    
+    be
