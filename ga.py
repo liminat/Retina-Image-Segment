@@ -218,4 +218,4 @@ def main():
     print("-- End of (successful) evolution --")
     
     best_ind = tools.selBest(pop, 1)[0]
-    print("Best individual i
+    print("Best individual is %s, %s" % (best_ind, be
