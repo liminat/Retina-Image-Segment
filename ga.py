@@ -217,4 +217,5 @@ def main():
 
     print("-- End of (successful) evolution --")
     
-    best_ind = tools.selBest(pop, 
+    best_ind = tools.selBest(pop, 1)[0]
+    print("Be
