@@ -220,4 +220,4 @@ def main():
     best_ind = tools.selBest(pop, 1)[0]
     print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
     stop = timeit.default_timer()
-    print "time cons
+    print "time consuming: ", stop - s
