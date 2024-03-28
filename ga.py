@@ -221,4 +221,5 @@ def main():
     print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
     stop = timeit.default_timer()
     print "time consuming: ", stop - start 
-if __name__ ==
+if __name__ == "__main__":
+    mai
