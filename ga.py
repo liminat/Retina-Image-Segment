@@ -222,4 +222,4 @@ def main():
     stop = timeit.default_timer()
     print "time consuming: ", stop - start 
 if __name__ == "__main__":
-    mai
+    main()
