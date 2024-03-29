@@ -42,3 +42,20 @@ class MFR:
         self.c = c
 
     def _filter_kernel_mf_fdog(self, t = 3, mf = True):
+        dim_y = int(self.L)
+        dim_x = int(2 * t * self.sigma)
+        if dim_x == 0:
+            dim_x = 1
+        if dim_y == 0:
+            dim_y = 1
+        arr = np.zeros((dim_y, dim_x), 'f')
+        
+        ctr_x = dim_x / 2 
+        ctr_y = int(dim_y / 2.)
+
+        # an un-natural way to set elements of the array
+        # to their x coordinate. 
+        # x's are actually columns, so the first dimension of the iterator is used
+        it = np.nditer(arr, flags=['multi_index'])
+        while not it.finished:
+            arr[it.multi_index] = it.multi_index[1] - ctr_x
