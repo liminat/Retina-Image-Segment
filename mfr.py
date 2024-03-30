@@ -71,3 +71,26 @@ class MFR:
         if not mf:
             div = self.sigma ** 2
             if div == 0:
+                div = 1.
+            sqrt_w_pi_sigma = sqrt_w_pi_sigma / div
+
+        @vectorize(['float32(float32)'], target='cpu')
+        def k_fun(x):
+            return sqrt_w_pi_sigma * exp(-x * x / two_sigma_sq)
+
+        @vectorize(['float32(float32)'], target='cpu')
+        def k_fun_derivative(x):
+            return -x * sqrt_w_pi_sigma * exp(-x * x / two_sigma_sq)
+
+        if mf:
+            kernel = k_fun(arr)
+            kernel = kernel - np.sum(kernel)/(dim_x*dim_y)
+        else:
+           kernel = k_fun_derivative(arr)
+
+        # return the "convolution" kernel for filter2D
+        return kernel
+
+    def fdog_filter_kernel(self, t = 3):
+        '''
+        K = - (x/(sqrt(2 * pi) * sigma ^3)) * exp(-x^2/2sigma^2), |y| <= L/2, |x| < s * t
