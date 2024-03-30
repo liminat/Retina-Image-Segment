@@ -59,3 +59,15 @@ class MFR:
         it = np.nditer(arr, flags=['multi_index'])
         while not it.finished:
             arr[it.multi_index] = it.multi_index[1] - ctr_x
+            it.iternext()
+
+        two_sigma_sq = 2 * self.sigma * self.sigma
+        if two_sigma_sq == 0:
+            two_sigma_sq = 1
+        div = sqrt(2 * pi) * self.sigma
+        if div == 0:
+            div = 1.
+        sqrt_w_pi_sigma = 1. / div
+        if not mf:
+            div = self.sigma ** 2
+            if div == 0:
