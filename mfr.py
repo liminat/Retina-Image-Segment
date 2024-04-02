@@ -94,3 +94,24 @@ class MFR:
     def fdog_filter_kernel(self, t = 3):
         '''
         K = - (x/(sqrt(2 * pi) * sigma ^3)) * exp(-x^2/2sigma^2), |y| <= L/2, |x| < s * t
+        '''
+        return self._filter_kernel_mf_fdog(t, False)
+
+    def gaussian_matched_filter_kernel(self, t = 3):
+        '''
+        K =  1/(sqrt(2 * pi) * sigma ) * exp(-x^2/2sigma^2), |y| <= L/2, |x| < s * t
+        '''
+        return self._filter_kernel_mf_fdog(t, True)
+
+    def createMatchedFilterBank(self, K, n = 12):
+        '''
+        Given a kernel, create matched filter bank
+        '''
+        rotate = 180 / n
+        center = (K.shape[1] / 2, K.shape[0] / 2)
+        cur_rot = 0
+        kernels = [K]
+
+        for i in range(1, n):
+            cur_rot += rotate
+            r_mat = cv2.getRotationMatrix2D(center, cur_rot, 1)
