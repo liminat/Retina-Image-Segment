@@ -115,3 +115,25 @@ class MFR:
         for i in range(1, n):
             cur_rot += rotate
             r_mat = cv2.getRotationMatrix2D(center, cur_rot, 1)
+            k = cv2.warpAffine(K, r_mat, (K.shape[1], K.shape[0]))
+            if np.count_nonzero(k):
+                mean = np.sum(k)/np.count_nonzero(k)
+            else: 
+                mean = 0
+            for y in range(len(k)):
+                for x in range(len(k[0])):
+                    if k[y][x]:
+                        k[y][x] -= mean
+            kernels.append(k)
+
+        return kernels
+
+    #Applying the filter bank
+    def applyFilters(self, im, kernels):
+        '''
+        Given a filter bank, apply them and record maximum response
+        '''
+        images = np.array([cv2.filter2D(im, -1, k) for k in kernels])
+        return np.max(images, 0)
+
+#######Parameters for DRIVE##################################
