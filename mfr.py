@@ -137,3 +137,21 @@ class MFR:
         return np.max(images, 0)
 
 #######Parameters for DRIVE##################################
+# L = 5      # the length of the neighborhood along the y-axis to smooth noise
+# sigma = 1
+# w = 31    # kernel size
+# c = 1 # the gain of threshold
+#######Parameters for STARE##################################
+L = 9      # the length of the neighborhood along the y-axis to smooth noise
+sigma = 1.5
+w = 31    # kernel size
+c = 1.5 # the gain of threshold
+
+def inbounds(shape, indices):
+    '''
+    Test if the given coordinates inside the given image. 
+
+    The first input parameter is the shape of image (height, weight) and the 
+    second parameter is the coordinates to be tested (y, x)
+
+    The function returns True if the coordinates inside the image and vice versa.
