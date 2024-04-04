@@ -155,3 +155,21 @@ def inbounds(shape, indices):
     second parameter is the coordinates to be tested (y, x)
 
     The function returns True if the coordinates inside the image and vice versa.
+
+    '''
+    assert len(shape) == len(indices)
+    for i, ind in enumerate(indices):
+        if ind < 0 or ind >= shape[i]:
+            return False
+    return True
+
+def setlable(img, labimg, x, y, label, size):
+    '''
+    This fucntion is used for label image. 
+
+    The first two input images are the image to be labeled and an output image with 
+    labeled region. "x", "y" are the coordinate to be tested, "label" is the ID
+    of a region and size is used to limit maximum size of a region. 
+
+    '''
+    if img[y][x] and not labimg[y][x]:
