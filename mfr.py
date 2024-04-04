@@ -173,3 +173,26 @@ def setlable(img, labimg, x, y, label, size):
 
     '''
     if img[y][x] and not labimg[y][x]:
+        labimg[y][x] = label
+        size += 1
+        if size > 500:
+                return False
+        if inbounds(img.shape, (y, x+1)):
+            setlable(img, labimg, x+1, y,label, size)
+        if inbounds(img.shape, (y+1, x)):
+            setlable(img, labimg, x, y+1,label, size)
+        if inbounds(img.shape, (y, x-1)):
+            setlable(img, labimg, x-1, y,label, size)
+        if inbounds(img.shape, (y-1, x)):
+            setlable(img, labimg, x, y-1,label, size)
+        if inbounds(img.shape, (y+1, x+1)):
+            setlable(img, labimg, x+1, y+1,label, size)
+        if inbounds(img.shape, (y+1, x-1)):
+            setlable(img, labimg, x-1, y+1,label, size)
+        if inbounds(img.shape, (y-1, x+1)):
+            setlable(img, labimg, x+1, y-1,label, size)
+        if inbounds(img.shape, (y-1, x-1)):
+            setlable(img, labimg, x-1, y-1,label, size)
+
+# im0 is the original image and mask is the mask image of the given image
+im0 = cv2.imread(sys.argv[1])
