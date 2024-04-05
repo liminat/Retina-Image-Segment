@@ -196,3 +196,30 @@ def setlable(img, labimg, x, y, label, size):
 
 # im0 is the original image and mask is the mask image of the given image
 im0 = cv2.imread(sys.argv[1])
+mask = cv2.imread(sys.argv[2])
+
+# we split the orignal image into 3 channels, b, g, r and only use green 
+# channel. Also, we convert the mask image into a grayscale image.
+b,g,r = cv2.split(im0) 
+im1 = g
+h, w = im1.shape[:2]
+im1 = 255 - im1
+mask = cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY)
+
+# initialize a variable of the class of MFR. 
+matched = MFR(L, sigma, w, c)
+
+# generate Gaussian filter and first-order derivative of Gaussian filter.
+gf = matched.gaussian_matched_filter_kernel()
+fdog = matched.fdog_filter_kernel()
+
+# generate filter bank
+bank_gf = matched.createMatchedFilterBank(gf, 12)
+bank_fdog = matched.createMatchedFilterBank(fdog, 12)
+
+# obtain matched filter response. H is the MFR-G and D is MFR-FDoG
+H = matched.applyFilters(im1, bank_gf)
+D = matched.applyFilters(im1, bank_fdog)
+
+# compute the threshold value using MFR-FDoG
+kernel_size = 31
