@@ -223,3 +223,24 @@ D = matched.applyFilters(im1, bank_fdog)
 
 # compute the threshold value using MFR-FDoG
 kernel_size = 31
+kernel = np.ones((kernel_size,kernel_size),np.float32)/(kernel_size*kernel_size)
+dm = np.zeros(D.shape,np.float32)
+DD = np.array(D, dtype='f')
+dm = cv2.filter2D(DD,-1,kernel)
+dmn = cv2.normalize(dm, 0, 1, cv2.NORM_MINMAX)
+uH = cv2.mean(H)
+Tc = matched.c * uH[0]
+T = (1+dmn) * Tc 
+
+# threshold the MFR-G with previous threhshold value.
+out = np.zeros(H.shape)
+out[H > T] = 255
+
+# using the mask image to truncate the value outside the reina. 
+laplacian = cv2.Laplacian(mask, cv2.CV_64F)
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(7,7))
+laplacian = cv2.dilate(laplacian,kernel,iterations = 4)
+H[(mask == 0) + (laplacian != 0)] = 0
+out[(mask == 0) + (laplacian != 0)] = 0
+
+# get rid of the segment less than 10 pixel 
