@@ -244,3 +244,19 @@ H[(mask == 0) + (laplacian != 0)] = 0
 out[(mask == 0) + (laplacian != 0)] = 0
 
 # get rid of the segment less than 10 pixel 
+lab = 1
+label = np.zeros(out.shape)
+for y in range(h):
+    for x in range(w):
+        if not label[y][x] and out[y][x]:
+            size = 0
+            setlable(out, label, x, y, lab, size)
+            lab += 1
+num = np.zeros(lab)
+for y in range(h):
+    for x in range(w):
+        num[int(label[y][x]-1)] += 1
+for y in range(h):
+    for x in range(w):
+        if num[int(label[y][x]-1)] <= 10:
+            out[y][x] = 0
