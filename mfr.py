@@ -260,3 +260,7 @@ for y in range(h):
     for x in range(w):
         if num[int(label[y][x]-1)] <= 10:
             out[y][x] = 0
+
+# generate the output images. 
+cv2.imwrite("Final_" + sys.argv[1], out)
+cv2.imwrite("MF_" + sys.argv[1], H)
