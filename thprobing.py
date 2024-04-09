@@ -27,3 +27,19 @@ def inbounds(shape, indices):
         if ind < 0 or ind >= shape[i]:
             return False
     return True
+
+def setlable(img, labimg, x, y, label):
+    '''
+    This fucntion is used for label image. 
+
+    The first two input images are the image to be labeled and an output image with 
+    labeled region. "x", "y" are the coordinate to be tested, "label" is the ID
+    of a region.
+
+    '''
+    if img[y][x] and not labimg[y][x]:
+        labimg[y][x] = label
+        if inbounds(img.shape, (y, x+1)):
+            setlable(img, labimg, x+1, y,label)
+        if inbounds(img.shape, (y+1, x)):
+            setlable(img, labimg, x, y+1,label)
