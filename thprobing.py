@@ -59,3 +59,24 @@ def setlable(img, labimg, x, y, label):
 def labelvessel(img, labimg, point, thresh, size, listcd): 
     '''
     This fucntion is used for generating a piece with paint-fill technique.  
+
+    The first two input images are the image to be labeled and an output image with 
+    labeled region. "point" is the coordinate to be tested, the "thresh" value the 
+    threshld value of paint-fill, size is used to limit maximum size of a region and
+    "listcd" is the list of coordinates of the pixels that are classified as vessel 
+    in the piece. 
+
+    '''
+    if img[point[1]][point[0]] >= thresh and not labimg[point[1]][point[0]] and thresh:
+        # print "img value: ", img[point[1]][point[0]], "thresh: ", thresh
+        labimg[point[1]][point[0]] = 1
+        x = point[0]
+        y = point[1]
+        listcd.append([x, y])
+        size += 1
+        try:
+            if size > 500:
+                return False
+            if inbounds(img.shape, (y, x+1)):
+                labelvessel(img, labimg, (x+1, y),thresh, size, listcd)
+            if inbounds(img.shape, (y+1, x)):
