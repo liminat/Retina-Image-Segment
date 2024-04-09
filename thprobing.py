@@ -43,3 +43,19 @@ def setlable(img, labimg, x, y, label):
             setlable(img, labimg, x+1, y,label)
         if inbounds(img.shape, (y+1, x)):
             setlable(img, labimg, x, y+1,label)
+        if inbounds(img.shape, (y, x-1)):
+            setlable(img, labimg, x-1, y,label)
+        if inbounds(img.shape, (y-1, x)):
+            setlable(img, labimg, x, y-1,label)
+        if inbounds(img.shape, (y+1, x+1)):
+            setlable(img, labimg, x+1, y+1,label)
+        if inbounds(img.shape, (y+1, x-1)):
+            setlable(img, labimg, x-1, y+1,label)
+        if inbounds(img.shape, (y-1, x+1)):
+            setlable(img, labimg, x+1, y-1,label)
+        if inbounds(img.shape, (y-1, x-1)):
+            setlable(img, labimg, x-1, y-1,label)
+
+def labelvessel(img, labimg, point, thresh, size, listcd): 
+    '''
+    This fucntion is used for generating a piece with paint-fill technique.  
