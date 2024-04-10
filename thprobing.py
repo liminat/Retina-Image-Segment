@@ -80,3 +80,22 @@ def labelvessel(img, labimg, point, thresh, size, listcd):
             if inbounds(img.shape, (y, x+1)):
                 labelvessel(img, labimg, (x+1, y),thresh, size, listcd)
             if inbounds(img.shape, (y+1, x)):
+                labelvessel(img, labimg, (x, y+1),thresh, size, listcd)
+            if inbounds(img.shape, (y, x-1)):
+                labelvessel(img, labimg, (x-1, y),thresh, size, listcd)
+            if inbounds(img.shape, (y-1, x)):
+                labelvessel(img, labimg, (x, y-1),thresh, size, listcd)
+            if inbounds(img.shape, (y+1, x+1)):
+                labelvessel(img, labimg, (x+1, y+1),thresh, size, listcd)
+            if inbounds(img.shape, (y+1, x-1)):
+                labelvessel(img, labimg, (x-1, y+1),thresh, size, listcd)
+            if inbounds(img.shape, (y-1, x-1)):
+                labelvessel(img, labimg, (x-1, y-1),thresh, size, listcd)
+            if inbounds(img.shape, (y-1, x+1)):
+                labelvessel(img, labimg, (x+1, y-1),thresh, size, listcd)
+        except Exception, e:
+            print "error: ", Exception, " in paint_fill..."
+
+class Probe:
+    '''
+    The class Probe is to implement probes in the region of  interest. 
