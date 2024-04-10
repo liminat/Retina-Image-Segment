@@ -99,3 +99,21 @@ def labelvessel(img, labimg, point, thresh, size, listcd):
 class Probe:
     '''
     The class Probe is to implement probes in the region of  interest. 
+
+    To inicialize the probe, we need histogram threshold value, the minimum 
+    and maximum size of the generated region, the maximum value of fringing 
+    and maximum value of branch (Ttree).
+
+    The init_queue function is to generate the inicial queue of probes with 
+    given image. 
+
+    The paint_fill function is to implement region growing with given threshld 
+    value.
+
+    The test function is to test the given region with 5 different tests.
+
+    The label fucntion is to mark the given piece into vessel.
+
+    The addpoints funciton is to add new probes to the end of queue.
+
+    The deletepoint funciton is to delete the probes that locate the previous 
