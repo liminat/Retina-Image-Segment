@@ -137,3 +137,23 @@ class Probe:
             if hist[i] > self.th:
                 hist[i] = 0
         h, w = mfr.shape
+        for y in range(h):
+            for x in range(w):
+                if not hist[mfr[y][x]]:
+                    mfr[y][x] = 0
+                else:
+                    mfr[y][x] = 1
+        threshimg = cp.copy(mfr)
+
+        # optimal option
+        # ret,mfr = cv2.threshold(mfr, 10, 255, cv2.THRESH_BINARY)
+        # thinning the threshold image
+        thmfr = thinning(mfr)
+        thinningimage = cp.copy(thmfr)
+
+        # erase branchpoints
+        for y in range(1,h-1,1):
+            for x in range(1,w-1,1):
+                if x == 0 or y == 0 or x == w-1 or y == h-1:
+                    continue 
+                p2 = int(thmfr[y-1, x])
