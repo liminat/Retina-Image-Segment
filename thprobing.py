@@ -157,3 +157,23 @@ class Probe:
                 if x == 0 or y == 0 or x == w-1 or y == h-1:
                     continue 
                 p2 = int(thmfr[y-1, x])
+                p3 = int(thmfr[y-1, x+1])
+                p4 = int(thmfr[y, x+1])
+                p5 = int(thmfr[y+1, x+1])
+                p6 = int(thmfr[y+1, x])
+                p7 = int(thmfr[y+1, x-1])
+                p8 = int(thmfr[y, x-1])
+                p9 = int(thmfr[y-1,x-1])
+                num = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
+                if num >= 3:
+                    thmfr[y, x] = 0
+
+        nonbranch = cp.copy(thmfr)
+
+        # discard segments < 10 pixels
+        lab = 1
+        label = np.zeros(thmfr.shape)
+        for y in range(h):
+            for x in range(w):
+                if not label[y][x] and thmfr[y][x]:
+                    setlable(thmfr, label, x, y, lab)
