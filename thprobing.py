@@ -117,3 +117,23 @@ class Probe:
     The addpoints funciton is to add new probes to the end of queue.
 
     The deletepoint funciton is to delete the probes that locate the previous 
+    veesel-classified pixel.
+
+    '''
+    def __init__(self, thresh, smin, smax, fringe, tree):
+        self.th = thresh
+        self.smin = smin
+        self.smax = smax
+        self.fg = fringe
+        self.tree = tree
+
+    def init_queue(self, mfr0):
+        # generate the histogram of MFR 
+        originalimg = cp.copy(mfr0)
+        mfr = cp.copy(mfr0)
+        h, w = mfr.shape
+        hist,bins = np.histogram(mfr.ravel(),256,[0,256])
+        for i in range(len(hist)):
+            if hist[i] > self.th:
+                hist[i] = 0
+        h, w = mfr.shape
