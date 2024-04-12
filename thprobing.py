@@ -177,3 +177,28 @@ class Probe:
             for x in range(w):
                 if not label[y][x] and thmfr[y][x]:
                     setlable(thmfr, label, x, y, lab)
+                    lab += 1
+        num = np.zeros(lab)
+        for y in range(h):
+            for x in range(w):
+                num[label[y][x]-1] += 1
+        for y in range(h):
+            for x in range(w):
+                if num[label[y][x]-1] <= 10:
+                    thmfr[y][x] = 0
+        remove = cp.copy(thmfr)
+        
+        # return initialized probe queue
+        # find endpoints for queue
+        queue = []
+
+        for y in range(1,h-1,1):
+            for x in range(1,w-1,1):
+                if x == 0 or y == 0 or x == w-1 or y == h-1:
+                    continue 
+                p2 = int(thmfr[y-1, x])
+                p3 = int(thmfr[y-1, x+1])
+                p4 = int(thmfr[y, x+1])
+                p5 = int(thmfr[y+1, x+1])
+                p6 = int(thmfr[y+1, x])
+                p7 = int(thmfr[y+1, x-1])
