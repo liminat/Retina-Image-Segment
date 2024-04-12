@@ -202,3 +202,18 @@ class Probe:
                 p5 = int(thmfr[y+1, x+1])
                 p6 = int(thmfr[y+1, x])
                 p7 = int(thmfr[y+1, x-1])
+                p8 = int(thmfr[y, x-1])
+                p9 = int(thmfr[y-1,x-1])
+                num = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
+                if num == 1:
+                    queue.append([x, y])
+        pointimg = cp.copy(thmfr)
+        return queue
+
+    def paint_fill(self, img, labelimg, p, T): 
+        size = 0
+        listcd = []
+        labelvessel(img, labelimg, p, T, size, listcd)
+        return (np.count_nonzero(labelimg), labelimg, listcd)
+
+    def tests(self, size, piece, T, vessel, listcd):
