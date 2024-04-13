@@ -229,3 +229,22 @@ class Probe:
             if T <= 1:
                 print "--test 2 false--"
                 return False
+
+            # third, the piece cannot touch the vessel-classied pixel
+            logpiece = piece > 0
+            logvessel = vessel > 0
+            result = logpiece & logvessel
+            if result.sum() > 0:
+                print "--test 3 false--"
+                return False
+
+            # fourth, border-pixels-touching-another-piece / total-pixel-in-piece
+            h, w = piece.shape[:2]
+            border = 0
+            for x, y in listcd:
+                if x == 0 or y == 0 or x == w-1 or y == h-1:
+                    continue 
+                p2 = int(piece[y-1, x])
+                p3 = int(piece[y-1, x+1])
+                p4 = int(piece[y, x+1])
+                p5 = int(piece[y+1, x+1])
