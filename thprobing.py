@@ -217,3 +217,15 @@ class Probe:
         return (np.count_nonzero(labelimg), labelimg, listcd)
 
     def tests(self, size, piece, T, vessel, listcd):
+
+        if size > 30:
+            print "--test 0 pass--"
+            # first, the size must less than smax
+            if size > self.smax:
+                print "--test 1 false--"
+                return False
+
+            # second, the threshold must be positive
+            if T <= 1:
+                print "--test 2 false--"
+                return False
