@@ -248,3 +248,21 @@ class Probe:
                 p3 = int(piece[y-1, x+1])
                 p4 = int(piece[y, x+1])
                 p5 = int(piece[y+1, x+1])
+                p6 = int(piece[y+1, x])
+                p7 = int(piece[y+1, x-1])
+                p8 = int(piece[y, x-1])
+                p9 = int(piece[y-1,x-1])
+                num = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
+                vp2 = int(vessel[y-1, x])
+                vp3 = int(vessel[y-1, x+1])
+                vp4 = int(vessel[y, x+1])
+                vp5 = int(vessel[y+1, x+1])
+                vp6 = int(vessel[y+1, x])
+                vp7 = int(vessel[y+1, x-1])
+                vp8 = int(vessel[y, x-1])
+                vp9 = int(vessel[y-1,x-1])
+                touch = vp2 + vp3 + vp4 + vp5 + vp6 + vp7 + vp8 + vp9 
+                if num != 8 and touch:
+                    border += 1
+            if (border / logpiece.sum()) > self.fg:
+                print "--test 4 false--"
