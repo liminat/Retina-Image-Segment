@@ -266,3 +266,12 @@ class Probe:
                     border += 1
             if (border / logpiece.sum()) > self.fg:
                 print "--test 4 false--"
+                return False
+
+            # fifth, total-pixel-in-piece / branches-in-piece
+            listcd.sort()
+            temppiece, indexskeleton = indirectindexing(listcd, piece)
+            branch = 0
+            for x, y in indexskeleton:
+                if x == 0 or y == 0 or x == w-1 or y == h-1:
+                    continue 
