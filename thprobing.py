@@ -275,3 +275,25 @@ class Probe:
             for x, y in indexskeleton:
                 if x == 0 or y == 0 or x == w-1 or y == h-1:
                     continue 
+                p2 = int(temppiece[y-1, x])
+                p3 = int(temppiece[y-1, x+1])
+                p4 = int(temppiece[y, x+1])
+                p5 = int(temppiece[y+1, x+1])
+                p6 = int(temppiece[y+1, x])
+                p7 = int(temppiece[y+1, x-1])
+                p8 = int(temppiece[y, x-1])
+                p9 = int(temppiece[y-1,x-1])
+                num = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
+                if num >= 3:
+                    branch += 1 
+            if (logpiece.sum() / branch) < self.tree:
+                print "--test 5 false--"
+                return False
+
+            print "--tests pass!--"
+            return True
+        else:
+            print "--test 0 false--"
+            # second, the threshold must be positive
+            if T <= 1:
+                print "--test 2 false--"
