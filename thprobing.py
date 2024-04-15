@@ -334,3 +334,18 @@ class Probe:
         return queue
 
     def deletepoint(self, queue, vessel, num):
+        que = cp.copy(queue)
+        count = 0
+        for j in range(num, len(queue), 1):
+            p = [0, 0]
+            p[1], p[0] = queue[j][1], queue[j][0]
+            num = vessel[p[1]][p[0]] + vessel[p[1]+1][p[0]] + vessel[p[1]][p[0]+1] +\
+                  vessel[p[1]][p[0]-1] + vessel[p[1]-1][p[0]]     
+            if num > 2:
+                que.pop(j-count)
+                count += 1
+        return que
+
+def checkidentical(l, point, vessel):
+    '''
+    This function is used for check if the given two points are same.
