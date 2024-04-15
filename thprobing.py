@@ -319,3 +319,18 @@ class Probe:
             if x == 0 or y == 0 or x == w-1 or y == h-1:
                     continue 
             p2 = int(tempvessel[y-1, x])
+            p3 = int(tempvessel[y-1, x+1])
+            p4 = int(tempvessel[y, x+1])
+            p5 = int(tempvessel[y+1, x+1])
+            p6 = int(tempvessel[y+1, x])
+            p7 = int(tempvessel[y+1, x-1])
+            p8 = int(tempvessel[y, x-1])
+            p9 = int(tempvessel[y-1,x-1])
+            num = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
+            if num == 1:
+                point = [x, y]
+                if not checkidentical(queue, point, vessel):
+                    queue.append(point)
+        return queue
+
+    def deletepoint(self, queue, vessel, num):
