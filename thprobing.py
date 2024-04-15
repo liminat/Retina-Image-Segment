@@ -297,3 +297,25 @@ class Probe:
             # second, the threshold must be positive
             if T <= 1:
                 print "--test 2 false--"
+                return False
+
+            # third, the piece cannot touch the vessel-classied pixel
+            logpiece = piece > 0
+            logvessel = vessel > 0
+            result = logpiece & logvessel
+            if result.sum() > 0:
+                print "--test 3 false--"
+                return False
+
+            return True
+
+    def label(self, vessel, tempvessel):
+        return (vessel | tempvessel)
+
+    def addpoints(self, queue, vesselpiece, vessel, listcd):
+        tempvessel, indexskeleton = indirectindexing(listcd, vesselpiece)
+        h, w = piece.shape[:2]
+        for x, y in indexskeleton:
+            if x == 0 or y == 0 or x == w-1 or y == h-1:
+                    continue 
+            p2 = int(tempvessel[y-1, x])
