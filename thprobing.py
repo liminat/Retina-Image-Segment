@@ -349,3 +349,16 @@ class Probe:
 def checkidentical(l, point, vessel):
     '''
     This function is used for check if the given two points are same.
+
+    '''
+    for i in l:
+        if i == point:
+            return True
+    return False
+
+def indirectindexing(listcd, img):
+    '''
+    This function used indrect index approach to thin the given piece.
+
+    '''
+    prev = np.zeros_like(img)
