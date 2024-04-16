@@ -362,3 +362,25 @@ def indirectindexing(listcd, img):
 
     '''
     prev = np.zeros_like(img)
+    diff = np.ones_like(img)
+    indexskeleton = []
+    while cv2.countNonZero(diff) > 15:
+        print "  find skeleton using indirect image indexing..."
+        img, indexskeleton = indirectIteration(listcd, img, indexskeleton, 0)
+        img, indexskeleton = indirectIteration(listcd, img, indexskeleton, 1)
+        diff = cv2.absdiff(img, prev)
+        prev = cp.copy(img)
+    return img, indexskeleton
+
+def indirectIteration(listcd, im, indexskeleton, iter):
+    '''
+    This function is the interation of indirectindexing.
+
+    '''
+    h, w = im.shape[:2]
+    marker = np.ones(im.shape)
+    for x, y in listcd:
+        if x == 0 or y == 0 or x == w-1 or y == h-1:
+            continue 
+        p2 = int(im[y-1, x])
+        p3 = int(im[y-1, x+1])
