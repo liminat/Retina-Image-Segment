@@ -440,3 +440,17 @@ def thinningIteration(im, iter):
                 continue 
             p2 = int(im[y-1, x])
             p3 = int(im[y-1, x+1])
+            p4 = int(im[y, x+1])
+            p5 = int(im[y+1, x+1])
+            p6 = int(im[y+1, x])
+            p7 = int(im[y+1, x-1])
+            p8 = int(im[y, x-1])
+            p9 = int(im[y-1,x-1])
+
+            A = (p2 == 0 and p3 == 1) + (p3 == 0 and p4 == 1) + \
+                (p4 == 0 and p5 == 1) + (p5 == 0 and p6 == 1) + \
+                (p6 == 0 and p7 == 1) + (p7 == 0 and p8 == 1) + \
+                (p8 == 0 and p9 == 1) + (p9 == 0 and p2 == 1)
+            B = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
+            if iter == 0:
+                m1 = p2 * p4 * p6
