@@ -423,3 +423,20 @@ def thinning(img):
         print "  thinning..."
         img = thinningIteration(img, 0)
         img = thinningIteration(img, 1)
+        diff = cv2.absdiff(img, prev)
+        prev = cp.copy(img)
+    return img
+
+def thinningIteration(im, iter):
+    '''
+    This function is the interation of the thinning funciton. 
+
+    '''
+    h, w = im.shape[:2]
+    marker = np.ones(im.shape)
+    for y in range(1,h-1,1):
+        for x in range(1,w-1,1):
+            if x == 0 or y == 0 or x == w-1 or y == h-1:
+                continue 
+            p2 = int(im[y-1, x])
+            p3 = int(im[y-1, x+1])
