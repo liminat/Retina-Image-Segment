@@ -405,3 +405,21 @@ def indirectIteration(listcd, im, indexskeleton, iter):
         if A == 1 and (B >= 2 and B <= 6) and m1 == 0 and m2 == 0:
             marker[y,x] = 0
     for x, y in listcd:
+        if im[y, x] and marker[y, x]:
+            im[y, x] = 1
+            indexskeleton.append([x, y])
+        else:
+            im[y, x] = 0
+    return im, indexskeleton
+
+def thinning(img):
+    '''
+    This function is to thin the image to generate initical queue of probes. 
+
+    '''
+    prev = np.zeros_like(img)
+    diff = np.ones_like(img)
+    while cv2.countNonZero(diff) > 15:
+        print "  thinning..."
+        img = thinningIteration(img, 0)
+        img = thinningIteration(img, 1)
