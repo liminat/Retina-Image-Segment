@@ -454,3 +454,19 @@ def thinningIteration(im, iter):
             B = p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9
             if iter == 0:
                 m1 = p2 * p4 * p6
+                m2 = p4 * p6 * p8
+            else:
+                m1 = p2 * p4 * p8
+                m2 = p2 * p6 * p8
+            if A == 1 and (B >= 2 and B <= 6) and m1 == 0 and m2 == 0:
+                marker[y,x] = 0
+    for y in range(h):
+        for x in range(w): 
+            if im[y, x] and marker[y, x]:
+                im[y, x] = 1
+            else:
+                im[y, x] = 0
+    return im
+
+def touchpieces(vessel, temp):
+    '''
