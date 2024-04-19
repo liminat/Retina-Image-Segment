@@ -470,3 +470,24 @@ def thinningIteration(im, iter):
 
 def touchpieces(vessel, temp):
     '''
+    This function is to test if the new piece connects two previous pieces.
+
+    '''
+    piece = cp.copy(temp)
+    vessel = vessel > 0 
+    count = 0
+    for i in range(len(temp)):
+        piece[i] = piece[i] > 0
+        touch = vessel & piece[i]
+        if np.count_nonzero(touch):
+            count += 1
+    if count == 2 and len(temp):
+        return True
+    else:
+        return False
+
+# img is the input image of matched filter response.
+img = cv2.imread(sys.argv[1])
+img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# define a maximum number of loop in the iteration of threshold probing. 
