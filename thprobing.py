@@ -491,3 +491,23 @@ img = cv2.imread(sys.argv[1])
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # define a maximum number of loop in the iteration of threshold probing. 
+loop_limit = 5000
+
+# to avoid the chaging of original image, we make a copy of the image.
+tempimg = cp.copy(img)
+
+# set the parameters 
+thresh = 5000 
+smin = 140 
+smax = 3000 
+fringe = 0.18 
+tree = 252
+
+# initialize the variable of probe.
+probe = Probe(thresh, smin, smax, fringe, tree)
+
+# temp is to store the previous piece [piece0, piece1, ...]
+temp = []
+
+# start to initialized queue
+que = probe.init_queue(tempimg)
