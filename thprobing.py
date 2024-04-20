@@ -511,3 +511,25 @@ temp = []
 
 # start to initialized queue
 que = probe.init_queue(tempimg)
+
+num = 0 # number of element in queue
+
+# vessel is to store the final vessel piexl
+vessel = np.zeros_like(img)
+while num < len(que) and num < loop_limit: # avoide too large # of probes 
+    print "  queue loop: ", num, "lenth of queue: ", len(que)
+
+    # tempvessel is to store  the temperary piece to be tested
+    tempvessel = np.zeros_like(img)   
+
+    # define the initial threshold value
+    T = img[que[num][1]][que[num][0]]
+    if T <= 0:
+        num += 1
+        continue
+    size = 0 # the size of piece
+
+    # start paint_fill pocessing
+    (size, piece, listcd) = probe.paint_fill(img, tempvessel, que[num], T)  # piece equals tempvessel
+
+    # start testing
