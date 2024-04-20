@@ -533,3 +533,28 @@ while num < len(que) and num < loop_limit: # avoide too large # of probes
     (size, piece, listcd) = probe.paint_fill(img, tempvessel, que[num], T)  # piece equals tempvessel
 
     # start testing
+    while probe.tests(size, piece, T, vessel, listcd): 
+        T -= 1
+        if T <= 0:
+            print "--Threshold to low--"
+            break
+        # est pass! T = T - 1
+        # start paint_fill pocessing
+        (size, piece, listcd) = probe.paint_fill(img, tempvessel, que[num], T)
+    print "  piece size: ", size
+    if size < smax and size > smin or touchpieces(vessel, temp):
+        # test failed! start label vessel
+        temp.append(tempvessel)
+        vessel = probe.label(vessel, tempvessel)
+        # finish labeling, start to add endpoints to queue
+        que = probe.addpoints(que, tempvessel, vessel, listcd)
+        # delete the point within the vessel 
+        que = probe.deletepoint(que, vessel, num)
+    else:
+        # test failed, but piece size is out of bound or contact more than two piece
+        pass
+        
+    # to next point in queue
+    num += 1
+
+# write image
