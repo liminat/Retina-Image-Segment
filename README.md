@@ -1,3 +1,3 @@
 # Retina-Image-Segmentation
 
-Jav
+Java implementation of vascu
