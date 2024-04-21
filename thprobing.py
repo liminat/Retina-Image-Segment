@@ -558,3 +558,8 @@ while num < len(que) and num < loop_limit: # avoide too large # of probes
     num += 1
 
 # write image
+cv2.imwrite("vessel"+".png", vessel*255)
+
+print "  finish all pocessing! Start showing imagesimage"
+
+
