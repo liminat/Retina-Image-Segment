@@ -7,4 +7,4 @@ The approach is based on [Zhang](http://azadproject.ir/wp-content/uploads/2014/1
 
 ### Usage
 ```Python
-python 
+python mfr.py RETINAL_IMAGE 
