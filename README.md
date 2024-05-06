@@ -7,4 +7,6 @@ The approach is based on [Zhang](http://azadproject.ir/wp-content/uploads/2014/1
 
 ### Usage
 ```Python
-python mfr.py RETINAL_IMAGE 
+python mfr.py RETINAL_IMAGE MASK_IMAGE
+```
+Note: th
