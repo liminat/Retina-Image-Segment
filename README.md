@@ -9,4 +9,6 @@ The approach is based on [Zhang](http://azadproject.ir/wp-content/uploads/2014/1
 ```Python
 python mfr.py RETINAL_IMAGE MASK_IMAGE
 ```
-Note: the mask image represents the outside area
+Note: the mask image represents the outside area. 
+
+Optional: To
