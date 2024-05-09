@@ -11,4 +11,4 @@ python mfr.py RETINAL_IMAGE MASK_IMAGE
 ```
 Note: the mask image represents the outside area. 
 
-Optional: To obtain a better set of hyper-parame
+Optional: To obtain a better set of hyper-parameters, I also provide th
