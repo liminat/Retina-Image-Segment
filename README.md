@@ -16,4 +16,4 @@ Optional: To obtain a better set of hyper-parameters, I also provide the code of
 python ga.py RETINAL_IMAGE GROUND_TRUTH_IMAGE
 ```
 
-### Results (Image f
+### Results (Image from [DRIVE](http
