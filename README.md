@@ -17,4 +17,6 @@ python ga.py RETINAL_IMAGE GROUND_TRUTH_IMAGE
 ```
 
 ### Results (Image from [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/) database)
-O
+Original image.  
+
+![ ]
