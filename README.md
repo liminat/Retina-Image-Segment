@@ -21,4 +21,4 @@ Original image.
 
 ![ ](images/21_training.png). 
 
-Result of 
+Result of Gaussian Match
