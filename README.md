@@ -23,4 +23,4 @@ Original image.
 
 Result of Gaussian Matched Filter. 
 
-![ ]
+![ ](images/DOG_21_traini
