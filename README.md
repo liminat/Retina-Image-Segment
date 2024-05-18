@@ -25,4 +25,6 @@ Result of Gaussian Matched Filter.
 
 ![ ](images/DOG_21_training.png). 
 
-Result of First Order Derivative of
+Result of First Order Derivative of Gaussian. 
+
+![ ](image
