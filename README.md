@@ -29,4 +29,6 @@ Result of First Order Derivative of Gaussian.
 
 ![ ](images/FDOG21_training.png). 
 
-Final s
+Final segmentation.  
+
+![ ]
