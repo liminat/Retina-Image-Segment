@@ -31,4 +31,4 @@ Result of First Order Derivative of Gaussian.
 
 Final segmentation.  
 
-![ ](images/Fina
+![ ](images/Final_21_training.png).  
