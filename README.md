@@ -33,4 +33,4 @@ Final segmentation.
 
 ![ ](images/Final_21_training.png).  
 
-## Approach: Piecewise Threshold Probing of
+## Approach: Piecewise Threshold Probing of the Matched Filter Resp
