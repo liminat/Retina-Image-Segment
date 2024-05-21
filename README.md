@@ -32,3 +32,5 @@ Result of First Order Derivative of Gaussian.
 Final segmentation.  
 
 ![ ](images/Final_21_training.png).  
+
+## Approach: Piecewis
