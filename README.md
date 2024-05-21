@@ -33,4 +33,4 @@ Final segmentation.
 
 ![ ](images/Final_21_training.png).  
 
-## Approach: Piecewis
+## Approach: Piecewise Threshold Probing of
