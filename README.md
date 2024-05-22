@@ -34,4 +34,4 @@ Final segmentation.
 ![ ](images/Final_21_training.png).  
 
 ## Approach: Piecewise Threshold Probing of the Matched Filter Response
-This approach 
+This approach is based on [Hoover](http
