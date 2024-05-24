@@ -37,4 +37,5 @@ Final segmentation.
 This approach is based on [Hoover](http://www.uhu.es/retinopathy/General/000301IEEETransMedImag.pdf)'s work. 
 
 ### Usage
-```
+```Python
+python thprobi
