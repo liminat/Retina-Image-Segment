@@ -38,4 +38,5 @@ This approach is based on [Hoover](http://www.uhu.es/retinopathy/General/000301I
 
 ### Usage
 ```Python
-python thprobing.py RESULT_OF_GAU
+python thprobing.py RESULT_OF_GAUSSIAN_MATCHED_FILTER
+```
