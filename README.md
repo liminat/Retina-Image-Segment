@@ -40,4 +40,4 @@ This approach is based on [Hoover](http://www.uhu.es/retinopathy/General/000301I
 ```Python
 python thprobing.py RESULT_OF_GAUSSIAN_MATCHED_FILTER
 ```
-Note: to imple
+Note: to implement this algorit
