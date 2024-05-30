@@ -45,4 +45,6 @@ Note: to implement this algorithm, you need to obtain the Gaussian matched filte
 ### Results (Image from [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/) database)
 Ground truth image. 
 
-![ ](images/
+![ ](images/gt.png)
+
+Generate vessel
