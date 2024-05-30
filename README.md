@@ -47,4 +47,4 @@ Ground truth image.
 
 ![ ](images/gt.png)
 
-Generate vessel
+Generate vessels from probes (
