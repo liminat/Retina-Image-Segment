@@ -49,4 +49,6 @@ Ground truth image.
 
 Generate vessels from probes (the blue dots).  
 
-!
+![ ](images/probes.gif)
+
+## D
