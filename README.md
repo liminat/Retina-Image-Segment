@@ -52,4 +52,4 @@ Generate vessels from probes (the blue dots).
 ![ ](images/probes.gif)
 
 ## Dataset
-I suggest [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/) database, since it provid
+I suggest [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/) database, since it provides the retina
